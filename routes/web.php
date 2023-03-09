@@ -21,7 +21,7 @@ Route::get('/login', function () {
     return view('public/login');
 });
 
-Route::get('/cardapio', [PublicController::class]);
+Route::get('/cardapio', [PublicController::class, 'cardapio']);
 
 
 //Route::get('/cardapio', function () {
