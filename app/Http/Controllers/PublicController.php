@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class PublicController extends Controller
 {
     public function landing() {
-        echo "Tudo certo ate agr";
+        $data = ['titulo' => 'Começando a usar Controllers!'];
+        return view('public/landing', $data);
     }
 }

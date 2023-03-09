@@ -6,7 +6,7 @@
       <!--Section: Features v.4-->
       <section class="section wow fadeIn" data-wow-delay="0.3s">
 
-        @component('components.feature-heading', ['title' => 'Nosso primeiro componente dinâmico', 'body'=> 'Melhor site do Brasil feio por um aluno do IFSP câmpus Guarulhos! Estudante do curso de ADS. 2023/1'])
+        @component('components.feature-heading', ['textcolor' => 'blue-text', 'title' => $titulo, 'body'=> 'Melhor site do Brasil feio por um aluno do IFSP câmpus Guarulhos! Estudante do curso de ADS. 2023/1'])
         @endcomponent
 
         <!--Grid row-->
