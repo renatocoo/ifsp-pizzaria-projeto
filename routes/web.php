@@ -21,13 +21,21 @@ Route::get('/login', function () {
     return view('public/login');
 });
 
-Route::get('/cardapio', function () {
-    return view('cardapio');
+Route::get('/cardapio', [PublicController::class]);
 
-});
+
+//Route::get('/cardapio', function () {
+//    return view('cardapio');
+//
+//});
 
 Route::get('/landing', function () {
     return view('public/landing');
+
+});
+
+Route::get('/template', function () {
+    return view('common.basic-template');
 
 });
 
