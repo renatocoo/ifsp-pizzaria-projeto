@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PublicController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,10 +29,12 @@ Route::get('/cardapio', [PublicController::class, 'cardapio']);
 //
 //});
 
-Route::get('/landing', function () {
-    return view('public/landing');
+Route::get('/landing', [PublicController::class, 'landing']);
 
-});
+//Route::get('/landing', function () {
+//    return view('public/landing');
+//
+//});
 
 Route::get('/template', function () {
     return view('common.basic-template');
