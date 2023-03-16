@@ -1,6 +1,6 @@
-@extends('common.basic-template');
+@extends('common.basic-template')
 
-@section('content');
+@section('content')
 <div style="height: 100vh">
     <div class="flex-center flex-column">
       <h1 class="text-hide animated fadeIn mb-4" style="background-image: url('https://mdbootstrap.com/img/logo/mdb-transparent-250px.png'); width: 250px; height: 90px;">MDBootstrap</h1>
