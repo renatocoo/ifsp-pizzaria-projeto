@@ -19,4 +19,15 @@ class PublicController extends Controller
         return view('forms.signup');
     }
      
+    public function save() {
+        echo '
+        <h1>Baby steps</h1><br><br><br><img src="https://suap.ifsp.edu.br/media/alunos/242781.y49d9HeEVfyy.jpg" height="100px" width="100px">
+        <style>
+            h1{
+                color: red;
+                font-familly: sans-serif;
+            }
+        </style>
+        ';
+    }
 }
