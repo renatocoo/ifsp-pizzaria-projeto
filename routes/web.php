@@ -32,6 +32,8 @@ Route::get('/cardapio', [PublicController::class, 'cardapio']);
 
 Route::get('/landing', [PublicController::class, 'landing']);
 
+Route::get('/signup', [PublicController::class, 'signup']);
+
 //Route::get('/landing', function () {
 //    return view('public/landing');
 //

@@ -14,4 +14,9 @@ class PublicController extends Controller
     public function cardapio() {
         return view('cardapio');
     }
+
+    public function signup() {
+        return view('forms.signup');
+    }
+     
 }
