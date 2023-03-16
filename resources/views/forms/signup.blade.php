@@ -6,7 +6,7 @@
         <div class="col-md-4 mx-auto">
             <!-- Default form register -->
             <form method="POST" class="text-center border border-light p-5 mt-5" action="{{ url('save') }}">
-
+                @csrf
                 <p class="h4 mb-4">Cadastra-se</p>
 
                 <div class="form-row mb-4">

@@ -19,7 +19,10 @@ class PublicController extends Controller
         return view('forms.signup');
     }
      
-    public function save() {
+    public function save(Request $request) {
+        //Sem injeção de request-> $obj= new Request();
+
+
         echo '
         <h1>Baby steps</h1><br><br><br><img src="https://suap.ifsp.edu.br/media/alunos/242781.y49d9HeEVfyy.jpg" height="100px" width="100px">
         <style>
