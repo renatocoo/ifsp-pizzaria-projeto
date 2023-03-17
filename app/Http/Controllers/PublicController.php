@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\LoginModel;
 
 class PublicController extends Controller
 {
@@ -26,19 +27,12 @@ class PublicController extends Controller
         //print_r($request->all());
         //print_r($request->input('nome'));
 
+        $model = new LoginModel();
         $data = $request->input();
-        foreach($data as $key => $value) {
-            echo "$key => $value <br>";
-        }
+        $v = $model->signUserIn($data);
+        return view("public.sign_success", ['info' => $v]);
 
-        echo '
-        <h1>Baby steps</h1><br><br><br><img src="https://suap.ifsp.edu.br/media/alunos/242781.y49d9HeEVfyy.jpg" height="100px" width="100px">
-        <style>
-            h1{
-                color: red;
-                font-familly: sans-serif;
-            }
-        </style>
-        ';
+        echo 'Aconteceu alguma coisa';
+
     }
 }
