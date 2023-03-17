@@ -31,6 +31,7 @@ class PublicController extends Controller
         $data = $request->input();
         $v = $model->signUserIn($data);
         return view("public.sign_success", ['info' => $v]);
+        
 
         echo 'Aconteceu alguma coisa';
 

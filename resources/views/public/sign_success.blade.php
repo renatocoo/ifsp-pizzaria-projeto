@@ -1,0 +1,1 @@
+{{ $info['nome']. ' '.$info['snome']}}

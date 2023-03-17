@@ -11,7 +11,8 @@ use Illuminate\Database\Eloquent\Model;
 class LoginModel extends Model {
 
     function signUserIn($data) {
-        
+        unset($data['_token']); //Nosso processamento
+        return $data;
     }
     
 }
