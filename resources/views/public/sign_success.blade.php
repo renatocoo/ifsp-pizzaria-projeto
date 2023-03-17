@@ -14,7 +14,7 @@
 
         <h4 class="card-title"><a>{{$info['nome'].' '.$info['snome']}}</a></h4>
         
-        <p class="card-text">Card</p>
+        <p class="card-text">Cartão do homem mais lindo que este país já viu!</p>
 
         </div>
 
