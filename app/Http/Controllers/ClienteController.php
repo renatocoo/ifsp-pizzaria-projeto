@@ -19,7 +19,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        //
+        echo 'Aqui vai o form de cadastro dos clientes.';
     }
 
     /**
