@@ -11,7 +11,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        echo 'Lista de clientes';
+        return view('private.clientes.lista');
     }
 
     /**
