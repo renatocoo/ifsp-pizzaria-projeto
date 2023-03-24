@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Helpers\ArrayHelper;
 
 use Illuminate\Http\Request;
 
@@ -11,7 +12,10 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        return view('private.clientes.lista');
+        $helper = new ArrayHelper();
+        $data = $helper->getData();
+        return view('private.clientes.lista', ['data' => $data]);
+        //compact == ['data' => $data];
     }
 
     /**
