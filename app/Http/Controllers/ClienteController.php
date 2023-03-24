@@ -14,7 +14,10 @@ class ClienteController extends Controller
     {
         $helper = new ArrayHelper();
         $data = $helper->getData();
-        return view('private.clientes.lista', ['data' => $data]);
+        return view('private.clientes.lista', [
+            'cols' => $data[0],
+            'data' => $data[1]
+        ]);
         //compact == ['data' => $data];
     }
 

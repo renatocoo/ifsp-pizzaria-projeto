@@ -8,20 +8,25 @@
 
             <table class="table">
                 <thead>
-                    <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <tr>                    
+                    @foreach ($cols as $col)
+                        <th scope="col">{{$col}}</th>
+                    @endforeach
+
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($data as $user)
                         <tr>
-                            <th scope="row">1</th>
+                            <!--<th scope="row">-></th>
                             <td>{{$user['nome']}}</td>
                             <td>{{$user['snome']}}</td>
-                            <td>{{$user['insta']}}</td>
+                            <td>{{$user['idade']}}</td>
+                            <td>{{$user['insta']}}</td>-->
+
+                            @foreach($user as $nomw => $valor)
+                                <td>{{$valor}}</td>
+                            @endforeach
                         </tr>
                     @endforeach
                 </tbody>
