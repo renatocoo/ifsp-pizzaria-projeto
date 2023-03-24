@@ -12,7 +12,6 @@
                     @foreach ($cols as $col)
                         <th scope="col">{{$col}}</th>
                     @endforeach
-
                     </tr>
                 </thead>
                 <tbody>
@@ -24,7 +23,7 @@
                             <td>{{$user['idade']}}</td>
                             <td>{{$user['insta']}}</td>-->
 
-                            @foreach($user as $nomw => $valor)
+                            @foreach($user as $nome => $valor)
                                 <td>{{$valor}}</td>
                             @endforeach
                         </tr>
