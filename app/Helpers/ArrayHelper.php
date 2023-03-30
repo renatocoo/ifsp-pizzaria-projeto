@@ -38,25 +38,22 @@ class ArrayHelper {
     private function getCard()
     {
         $html = '
-    <div class="card">
+        <div class="card">
 
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.webp" alt="Card image cap">
 
-        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.webp" alt="Card image cap">
+            <div class="card-body">
 
+                <h4 class="card-title"><a>Card title</a></h4>
 
-        <div class="card-body">
+                <p class="card-text"> Some quick example text to build on the card title and make up the bulk of the cards
+                    content.</p>
 
+                <a href="#" class="btn btn-primary">Button</a>
 
-            <h4 class="card-title"><a>Card title</a></h4>
+            </div>
 
-            <p class="card-text"> Some quick example text to build on the card title and make up the bulk of the cards
-                content.</p>
-
-            <a href="#" class="btn btn-primary">Button</a>
-
-        </div>
-
-    </div>'
+        </div>'
 ;
         return $html;
     }
