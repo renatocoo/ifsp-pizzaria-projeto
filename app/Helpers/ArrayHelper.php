@@ -18,8 +18,14 @@ class ArrayHelper {
 
     //Lógica de acesso para proteger os dados do objeto
     //Encapsulamento 
-    public function getData() {
+    public function getData() 
+    {
         return [$this->cols, $this->data];
+    }
+
+    public function getClientPhotos()
+    {
+        return ['cards' => 'baby steps'];
     }
 
 }
