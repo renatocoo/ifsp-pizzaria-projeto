@@ -2,6 +2,8 @@
 
 namespace App\Helpers;
 
+use App\Components\ProfileCard;
+
 class ArrayHelper {
     
     //Array que contem dados de teste (fake data)
@@ -25,43 +27,14 @@ class ArrayHelper {
 
     public function getClientPhotos()
     {
-        $html ='';
-        $listaCards = '';
+        $profile = new ProfileCard();
 
-        for ($i=0; $i < 12; $i++) { 
-           $html .= $this->getCard();
+        $html ='';
+        for ($i=1; $i <= 12; $i++) { 
+           $html .= $profile->getCard($i);
         }
 
         return ['cards' => $html];
     }
 
-    private function getCard()
-    {
-        $html = '
-        <div class="col-lg-2 col-md-3 col-sm-4 mt-3">
-            <div class="card">
-
-                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.webp" alt="Card image cap">
-
-                <div class="card-body">
-
-                    <h4 class="card-title"><a>Card title</a></h4>
-
-                    <p class="card-text"> Some quick example text to build on the card title and make up the bulk of the cards
-                        content.</p>
-
-                    <a href="#" class="btn btn-primary">Button</a>
-
-                </div>
-
-            </div>
-        </div>'
-;
-        return $html;
-    }
-
-    private function getAvatar($index) {
-        $index = $index > 33 ? 33 : ($index < 1 ? 1 : $index);
-        return "https://mdbootstrap.com/img/Photos/Avatars/img%20%28$index%29.webp";
-    }
 }
