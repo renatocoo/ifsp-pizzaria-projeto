@@ -57,4 +57,9 @@ class ArrayHelper {
 ;
         return $html;
     }
+
+    private function getAvatar($index) {
+        $index = $index > 33 ? 33 : ($index < 1 ? 1 : $index);
+        return "https://mdbootstrap.com/img/Photos/Avatars/img%20%28$index%29.webp";
+    }
 }
