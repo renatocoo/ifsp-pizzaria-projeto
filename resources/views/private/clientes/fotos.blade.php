@@ -2,12 +2,10 @@
 
 @section('content')
 
-<div class="container">
+<div class="container mt-3">
     <div class="row">
-        <div class="col-lg-2 col-md-3 col-sm-4">
 
-            {{$cards}}
+        {!! $cards !!}
 
-        </div>
     </div>
 </div>
