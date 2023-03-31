@@ -31,7 +31,7 @@ class ArrayHelper {
 
         $html ='';
         for ($i=1; $i <= 12; $i++) { 
-           $html .= $profile->getCard($i);
+           $html .= $profile->getCard($i + 15);
         }
 
         return ['cards' => $html];
