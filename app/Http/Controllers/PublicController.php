@@ -3,37 +3,43 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\LoginModel;
+
+use App\Models\LoginModel; // import do model criado com o artisan
 
 class PublicController extends Controller
 {
-    public function landing() {
-        $data = ['textcolor' => 'blue-text', 'title' => 'Eae, mano, de boa?', 'body'=> 'Melhor site do Brasil feio por um aluno do IFSP câmpus Guarulhos! Estudante do curso de ADS. 2023/1'];
+    public function landing()
+    {
+        $data = ['textcolor' => 'purple-text', 'title' => 'Pizzaria do Jhonas', 'body' => 'Massa em falta, recheio em dobro'];
         return view('public.landing', ['data' => $data]);
     }
-    
-    public function cardapio() {
+
+    public function cardapio()
+    {
         return view('cardapio');
     }
 
-    public function signup() {
+    public function signup()
+    {
         return view('forms.signup');
-    }
-     
-    public function save(Request $request) {
-        //Sem injeção de request-> $obj= new Request();
-        //dd($request->all());
-        //dd($request);
-        //print_r($request->all());
-        //print_r($request->input('nome'));
-
+    }  
+    
+    public function save(Request $request) //Injeção de dependência
+    {
         $model = new LoginModel();
-        $data = $request->input();
+        $data = $request->input();//$request->input('nome do campo que você quer')
+       /*  foreach ($data as $key => $value){
+            echo '$key -> $value <br>'; mostra todos os itens do input, percorridos
+        }
+        // echo "save's gonna be alright!"; */
+
         $v = $model->signUserIn($data);
-        return view("public.sign_success", ['info' => $v]);
-        
+        /* print_r($v); */
+        return view('public.sign_success', ['info' => $v]);
+    }
 
-        echo 'Aconteceu alguma coisa';
-
+    public function atv1()
+    {
+        return view('atv1');
     }
 }

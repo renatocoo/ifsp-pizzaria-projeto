@@ -1,27 +1,47 @@
 <?php
 
-namespace App\Helpers;
 
+namespace App\Helpers; //pacotes
 use App\Components\ProfileCard;
 
 class ArrayHelper {
-    
-    //Array que contem dados de teste (fake data)
+
+    /* Array que contem dados de teste (fake data) */
 
     private $data = [
-        ['nome' => 'Maria', 'snome' => 'Silva', 'idade' => '18', 'insta' => '@mary'],
-        ['nome' => 'Joana', 'snome' => 'Santos', 'idade' => '18', 'insta' => '@jo'],
-        ['nome' => 'Elza', 'snome' => 'Lima', 'idade' => '18', 'insta' => '@elzy'],
-        ['nome' => 'Lilian', 'snome' => 'Sales', 'idade' => '18', 'insta' => '@lilica'],
-        ['nome' => 'Edna', 'snome' => 'Souza', 'idade' => '18', 'insta' => '@dina']
+        ['nome' => 'Maria',
+        'snome' => 'Silva',
+        'insta' => '@mary',
+        'idade' => 18
+        ],
+        ['nome' => 'Joana',
+        'snome' => 'Santos',
+        'insta' => '@joSantos',
+        'idade' => 18
+        ],
+        ['nome' => 'Elza',
+        'snome' => 'Lima',
+        'insta' => '@ezlima',
+        'idade' => 18
+        ],
+        ['nome' => 'Lilian',
+        'snome' => 'Sales',
+        'insta' => '@lily',
+        'idade' => 18
+        ],
+        ['nome' => 'Edna',
+        'snome' => 'Souza',
+        'insta' => '@elsa',
+        'idade' => 18
+        ],
     ];
 
-    private $cols = ['Nome', 'Sobrenome', 'Idade', 'Insta'];
+    private $cols = ['Nome', 'Sobrenome', 'Insta', 'Idade',];
 
-    //Lógica de acesso para proteger os dados do objeto
-    //Encapsulamento 
-    public function getData() 
-    {
+    //logica de acesso para proteger os dados do objeto
+    //encapsulamento (getters || setters)
+    public function getData() {
+        //lógica de acesso
         return [$this->cols, $this->data];
     }
 
@@ -29,12 +49,12 @@ class ArrayHelper {
     {
         $profile = new ProfileCard();
 
-        $html ='';
-        for ($i=1; $i <= 12; $i++) { 
-           $html .= $profile->getCard($i + 15);
+        $html = '';
+
+        for ($i = 1; $i <= 12; $i++) {
+            $html .= $profile->getCard($i+15);
         }
 
         return ['cards' => $html];
-    }
-
+    }   
 }

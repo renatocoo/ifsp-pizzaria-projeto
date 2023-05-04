@@ -1,23 +1,27 @@
 <table class="table">
-    <h1>Tabela sendo usada como componente</h1>
-    <thead>
-        <tr>                    
+    <p>Tabela sendo usada como componente</p>
+    <thead class="black white-text">
+        <!-- <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+        </tr> -->
         @foreach ($cols as $col)
             <th scope="col">{{$col}}</th>
         @endforeach
-        </tr>
     </thead>
     <tbody>
         @foreach ($data as $user)
             <tr>
-                <!--<th scope="row">-></th>
+                <!-- <th scope="row">-></th>
                 <td>{{$user['nome']}}</td>
                 <td>{{$user['snome']}}</td>
                 <td>{{$user['idade']}}</td>
-                <td>{{$user['insta']}}</td>-->
+                <td>{{$user['insta']}}</td> -->
 
                 @foreach($user as $nome => $valor)
-                    <td><i class="far fa-gem mr-2 danger-text" aria-hidden="true">{{$valor}}</td>
+                    <td>{{$valor}}</td>
                 @endforeach
             </tr>
         @endforeach

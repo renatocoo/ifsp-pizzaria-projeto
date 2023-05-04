@@ -1,0 +1,18 @@
+Páginas Dinâmicas PHP
+
+- Estrutura estática / conteúdo estático (pontos de PHP)
+-- Código HTML com poucas variáveis
+
+
+- Estrutura estática / conteúdo dinâmico (componentes)
+-- Código HTML e regiões da página definidas por funções(ou variáveis) do PHP
+-- O conteúdo gerado dinamicamente afeta a estrutura visual da págaina
+
+
+- Estrutura dinâmica / conteúdo estático (componentes e classes simples)
+-- A estrutura da página é gerada programaticamente
+-- O HTML não define mais a estrutura do código e sim é produzido pelo PHP
+
+
+- Estrutura dinâmica / conteúdo dinâmica (classes mais sofisticadas)
+-- Toda página é gerada pela lógica de programação.

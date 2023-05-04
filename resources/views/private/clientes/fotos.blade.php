@@ -1,11 +1,8 @@
 @extends('common.basic-template')
 
 @section('content')
-
-<div class="container mt-3">
+<div class="container">
     <div class="row">
-
-        {!! $cards !!}
-
-    </div>
+            {!! $cards !!}
+    </div>   
 </div>

@@ -1,0 +1,18 @@
+composer install --ignore-platform-reqs
+
+php artisan serve - subir o servidor -> Express
+
+copy .env.example .env -- erro 500
+
+ATBBBypbu9FGvWxTfskQzS5kj7TZ9361DB4B = senha projeto
+
+php artisan make:controller PublicController --resource
+
+git init
+git add .
+git commit -m 'aula 16.03.2023 forms'
+git config remote https://LucasKnupp@bitbucket.org/lp2-classes/lp2-aulas-commit
+git config --global push.default current
+git push -f origin master
+
+php artisan make:model Name
