@@ -8,11 +8,10 @@ class DateTimeHelper{
     //@return string: data no formato brasileiro (dd/mm/aaaa)
 
     public static function UStoBRDate($date) {
-        echo $date;
         $aux = explode('-', $date);
         $aux = array_reverse($aux);
         $data = implode('/', $aux);
-        dd($data);
+        return $data;
     }
 
 }
