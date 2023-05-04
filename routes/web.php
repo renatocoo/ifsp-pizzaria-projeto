@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,4 +58,4 @@ Route::resource('cliente', ClienteController::class);//Metodos padrao vão por u
 
 //crud de alunos
 
-
+Route::get('/post', [PostController::class, 'lista']);
