@@ -6,13 +6,16 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+   
     public function up(): void
     {
         Schema::create('celular', function (Blueprint $table) {
             $table->id();
+            $table->char('marca', 100);
+            $table->char('modelo', 100);
+            $table->decimal('preco', $precision = 8,$scale = 2);
+            $table->tinyinteger('largura');
+            $table->tinyinteger('altura');
             $table->timestamps();
         });
     }
